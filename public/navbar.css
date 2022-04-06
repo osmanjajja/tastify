@@ -1,0 +1,37 @@
+main {
+  margin: 0px;
+}
+.navbar {
+  margin: 0px important;
+  padding: 0px important;
+  display: flex;
+  align-items: center;
+  background: #fe596b;
+  color: white;
+  font-family: Helvetica;
+  font-weight: 200;
+}
+.navbar__title {
+  margin-right: auto;
+  font-size: 150%;
+  padding: 8px 8px;
+}
+.navbar__item {
+  padding: px 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.navbar__item:hover {
+  padding: px 16px;
+  color: white;
+  transition: 0.8s;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+.navbar__item:click {
+  padding: px 16px;
+  color: rgb(64, 222, 29);
+  transition: 0.8s;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
