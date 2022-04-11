@@ -1,21 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Login from "./auth/Login";
-import Register from "./auth/Register";
-import Reset from "./auth/Reset";
-import Dashboard from "./auth/Dashboard";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Reset from "./components/Reset";
+import Dashboard from "./pages/Dashboard";
 import SearchParams from "./pages/SearchRecipe";
 import Details from "./components/Details";
 import SearchByIng from "./pages/SearchByIng";
 import SearchByNutrients from "./pages/SearchByNutrients";
 import SearchSimilarRecipe from "./pages/SearchSimilarRecipes";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <header>
-        <Link to="/home">Tastify!</Link>
-      </header>
       <Routes>
         <Route path="/" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

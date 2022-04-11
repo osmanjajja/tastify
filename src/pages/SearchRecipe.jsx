@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Result from "../components/Results";
+import NavBar from "../components/NavBar";
+
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const SearchParams = () => {
@@ -24,21 +26,26 @@ const SearchParams = () => {
   }
 
   return (
-    <div className="search-params">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchRecipies();
-        }}
-      >
-        <label htmlFor="recipe">
-          Search:
-          <input id="recipe" placeholder="Search Recipe by Name (Pasta)" value={recipe} onChange={(e) => setRecipe(e.target.value)} />
-        </label>
-        <button>Submit</button>
-      </form>
-      <Result recipes={recipes} />
-    </div>
+    <React.Fragment>
+      <header>
+        <NavBar />
+      </header>
+      <div className="search-params">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            searchRecipies();
+          }}
+        >
+          <label htmlFor="recipe">
+            Search:
+            <input id="recipe" placeholder="Search Recipe by Name (Pasta)" value={recipe} onChange={(e) => setRecipe(e.target.value)} />
+          </label>
+          <button>Submit</button>
+        </form>
+        <Result recipes={recipes} />
+      </div>
+    </React.Fragment>
   );
 };
 

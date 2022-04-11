@@ -6,7 +6,7 @@
 body {
   background-color: #81a69b;
   background-image: url("./Food.png");
-  margin: 0;
+  margin: 80px 0px 0px 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -87,7 +87,7 @@ body {
   text-overflow: ellipsis;
 }
 
-header > a,
+/* header > a,
 #root > div > h1 {
   display: inline-block;
   background-image: url(./tastify.png);
@@ -97,7 +97,7 @@ header > a,
   overflow: hidden;
   text-indent: -9999px;
   margin: 20px 0;
-}
+} */
 
 .recipe h2 {
   white-space: nowrap;

@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Result from "../components/Results";
+import NavBar from "../components/NavBar";
+
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const SearchParams = () => {
@@ -25,54 +27,79 @@ const SearchParams = () => {
   }
 
   return (
-    <div className="search-params">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          searchByNutrients();
-        }}
-      >
-        <label htmlFor="mincarb">
-          Min-Carbohydrate:
-          <input id="mincarb" placeholder="Enter Minimum daily Carbohydrate Required" value={minCarb} onChange={(e) => setMinCarb(e.target.value)} />
-        </label>
-        <label htmlFor="maxcarb">
-          Max-Carbohydrate:
-          <input id="maxcarb" placeholder="Enter Maximum daily Carbohydrate Required" value={maxCarb} onChange={(e) => setMaxCarb(e.target.value)} />
-        </label>
+    <React.Fragment>
+      <header>
+        <NavBar />
+      </header>
+      <div className="search-params">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            searchByNutrients();
+          }}
+        >
+          <label htmlFor="mincarb">
+            Min-Carbohydrate:
+            <input
+              id="mincarb"
+              placeholder="Enter Minimum daily Carbohydrate Required"
+              value={minCarb}
+              onChange={(e) => setMinCarb(e.target.value)}
+            />
+          </label>
+          <label htmlFor="maxcarb">
+            Max-Carbohydrate:
+            <input
+              id="maxcarb"
+              placeholder="Enter Maximum daily Carbohydrate Required"
+              value={maxCarb}
+              onChange={(e) => setMaxCarb(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="mincal">
-          Min-Calories:
-          <input
-            id="mincal"
-            placeholder="Enter Minimum daily Calories Required"
-            value={minCalories}
-            onChange={(e) => setMinCalories(e.target.value)}
-          />
-        </label>
-        <label htmlFor="maxcal">
-          Max-Calories:
-          <input
-            id="maxcal"
-            placeholder="Enter Maximum daily Calories Required"
-            value={maxCalories}
-            onChange={(e) => setMaxCalories(e.target.value)}
-          />
-        </label>
+          <label htmlFor="mincal">
+            Min-Calories:
+            <input
+              id="mincal"
+              placeholder="Enter Minimum daily Calories Required"
+              value={minCalories}
+              onChange={(e) => setMinCalories(e.target.value)}
+            />
+          </label>
+          <label htmlFor="maxcal">
+            Max-Calories:
+            <input
+              id="maxcal"
+              placeholder="Enter Maximum daily Calories Required"
+              value={maxCalories}
+              onChange={(e) => setMaxCalories(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="minpro">
-          Min-Calories:
-          <input id="minpro" placeholder="Enter Minimum daily Protein Required" value={minProtein} onChange={(e) => setMinProtein(e.target.value)} />
-        </label>
-        <label htmlFor="maxcal">
-          Max-Calories:
-          <input id="maxcal" placeholder="Enter Maximum daily Protein Required" value={maxProtein} onChange={(e) => setMaxProtein(e.target.value)} />
-        </label>
+          <label htmlFor="minpro">
+            Min-Calories:
+            <input
+              id="minpro"
+              placeholder="Enter Minimum daily Protein Required"
+              value={minProtein}
+              onChange={(e) => setMinProtein(e.target.value)}
+            />
+          </label>
+          <label htmlFor="maxcal">
+            Max-Calories:
+            <input
+              id="maxcal"
+              placeholder="Enter Maximum daily Protein Required"
+              value={maxProtein}
+              onChange={(e) => setMaxProtein(e.target.value)}
+            />
+          </label>
 
-        <button>Submit</button>
-      </form>
-      <Result recipes={recipes} />
-    </div>
+          <button>Submit</button>
+        </form>
+        <Result recipes={recipes} />
+      </div>
+    </React.Fragment>
   );
 };
 

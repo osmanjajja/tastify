@@ -1,22 +1,34 @@
 import { Link } from "react-router-dom";
-import Login from "../auth/Login";
-import Register from "../auth/Register";
-import Reset from "../auth/Reset";
-import Dashboard from "../auth/Dashboard";
-const NavBar = () => (
-  <header className="navbar">
-    <Link to={Login} className="navbar__title navbar__item">
-      Welcome username
-    </Link>
-    <Link to={Register} className="navbar__item">
-      About Us
-    </Link>
-    <Link to={Reset} className="navbar__item">
-      Contact
-    </Link>
-    <Link to={Dashboard} className="navbar__item">
-      Help
-    </Link>
-  </header>
-);
+import React from "react";
+
+const NavBar = () => {
+  return (
+    <nav id="navbar" class="">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <Link to="#home"></Link>
+        </div>
+
+        <ul id="menu">
+          <li>
+            <Link to="/home">Search</Link>
+          </li>
+          <li>
+            <Link to="/ingredients">Find By Ingredient</Link>
+          </li>
+          <li>
+            <Link to="/nutrients">find By Nutrients</Link>
+          </li>
+          <li>
+            <Link to="/similar">Search Similar</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Login Info</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
 export default NavBar;
