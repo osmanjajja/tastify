@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Reset from "./components/Reset";
@@ -9,7 +9,6 @@ import Details from "./components/Details";
 import SearchByIng from "./pages/SearchByIng";
 import SearchByNutrients from "./pages/SearchByNutrients";
 import SearchSimilarRecipe from "./pages/SearchSimilarRecipes";
-import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
