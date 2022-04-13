@@ -1,3 +1,35 @@
+# Tastify
+
+![plot](./public/homepage.png);
+
+## Introduction
+
+Tastify Provide to search Recipe-Food-Nutrition from over the365,000 recipes and nutritional information on over 86,000 food items.
+
+#### Important Features:
+
+1. Search Recipes from over 365,000 recipes.
+2. Search Recipes by Nutrients (Daily Intake amount of Nutrients)
+3. Search Recipes by ingredients (what’s in your fridge)
+4. Get individual Ingredient Information.Saturated Fat.
+5. Get Similar Recipes.
+6. Get Recipe Information (Cooking Time, Nutrition Facts etc).
+7. Firebase Database.
+
+## Requirement:
+
+1. Signup and Get Your Spoonacular api key.
+2. Create a '.env.local' File and in that file Create Variable 'REACT_APP_API_KEY='paste your Spoonacular api key here'.Save it
+
+## Setup:
+
+1. Download and Extract Zip.
+2. Open in your Favorite Code Editor.
+3. Create .env.local file in root of project and fulfill Requirement#2.
+4. Run in cmd'npm install' in root of project folder.
+5. Run 'npm start'.
+6. Done.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
