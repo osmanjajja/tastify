@@ -87,18 +87,6 @@ body {
   text-overflow: ellipsis;
 }
 
-/* header > a,
-#root > div > h1 {
-  display: inline-block;
-  background-image: url(./tastify.png);
-  filter: brightness(150%);
-  width: 195px;
-  height: 50px;
-  overflow: hidden;
-  text-indent: -9999px;
-  margin: 20px 0;
-} */
-
 .recipe h2 {
   white-space: nowrap;
   font-weight: normal;
